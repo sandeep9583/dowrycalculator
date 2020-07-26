@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Dowry Calculator</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/checkout/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+    <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+
+
+</head>
+<body  class="d-flex flex-column h-100">
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="index.html">Dowry Calculator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72"
+             height="72">
+        <h2>Dowry Calculator for Indian Brides and Grooms</h2>
+        <p class="lead">A Scientific Approach to Dowry Calculation</p>
+    </div>
+
+
+    <div class="col-md-8 order-md-1">
+        <h4 class="mb-3">My Details</h4>
+
+        <div class="row">
+
+            <div class="col-md-6 mb-3">
+                <label for="country">I am</label>
+                <select class="custom-select d-block w-100" id="country" required>
+                    <option
+                            selected="yes" value="a1">Male</option><option
+                        value="a2">Female</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid country.
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="state">Religion/Caste</label>
+                <select class="custom-select d-block w-100" id="state" required>
+                    <option selected="yes"
+                            value="c1">Hindu -- Upper Caste</option>
+                    <option value="c2">Hindu -- Backward Caste</option>
+                    <option value="c3">Hindu -- All Other</option>
+                    <option value="c4">Christian -- Upper Caste</option>
+                    <option value="c5">Christian -- Backward Caste</option>
+                    <option value="c6">Christian -- All Other</option>
+                    <option value="c7">Muslims -- All Castes</option>
+                    <option value="c8">others</option>
+                </select>
+
+                <div class="invalid-feedback">
+                    Please provide a valid state.
+                </div>
+            </div>
+
+
+            <div class="col-md-6 mb-3">
+                <label for="country">I speak</label>
+                <select class="custom-select d-block w-100" id="country" required>
+                    <option selected="yes"
+                            value="d1">Telugu</option>
+                    <option value="d2">Tamil</option>
+                    <option value="d3">Hindi</option>
+                    <option value="d4">Bengali</option>
+                    <option value="d5">Marathi</option>
+                    <option value="d6">Kannada</option>
+                    <option value="d7">Malayalam</option>
+                    <option value="d8">Gujrati</option>
+                    <option value="d9">Urdu</option>
+                    <option value="d10">Punjabi</option>
+                    <option value="d11">Oriya</option>
+                    <option value="d12">All others</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid country.
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="state">Age</label>
+                <select class="custom-select d-block w-100" id="state" required>
+                    <option value="b1">Less than or equal 24</option>
+                    <option value="b2">25</option>
+                    <option value="b3">26</option>
+                    <option selected="yes" value="b4">27</option>
+                    <option value="b5">28</option>
+                    <option value="b6">29</option>
+                    <option value="b7">30 - 34</option>
+                    <option value="b8">34 - 39</option>
+                    <option value="b9">39 +</option>
+                </select>
+
+                <div class="invalid-feedback">
+                    Please provide a valid state.
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="country">Annual Salary</label>
+                <select class="custom-select d-block w-100" id="country" required>
+                    <option value="g1">Less than 2,00,000</option>
+                    <option value="g2">2,00,000 to 3,50,000</option>
+                    <option value="g3">3,50,000 to 6,00,000</option>
+                    <option selected="yes" value="g4">6,00,000 to 10,00,000</option>
+                    <option value="g5">10,00,000 to 15,00,000</option>
+                    <option value="g6">15,00,000 to 25,00,000</option>
+                    <option value="g7">25,00,000 +</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid country.
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="state">Occupation</label>
+                <select class="custom-select d-block w-100" id="state" required>
+                    <option selected="yes" value="h1">Software Engineer</option>
+                    <option value="h2">Doctor</option>
+                    <option value="h3">SomeJob in America</option>
+                    <option value="h4">Something todo with Computers</option>
+                    <option value="h5">Business</option>
+                    <option value="h6">Teacher / Lecturer / Professor </option>
+                    <option value="h7">Other </option>
+                </select>
+
+                <div class="invalid-feedback">
+                    Please provide a valid state.
+                </div>
+            </div>
+
+
+            <div class="col-md-6 mb-3">
+                <label for="country">Studied</label>
+                <select class="custom-select d-block w-100" id="country" required>
+                    <option selected="yes" value="l1">I.I.T / B.I.T.S</option>
+                    <option value="l2">I.I.M</option>
+                    <option value="l3">I.I.T + I.I.M</option>
+                    <option value="l4">Engineering + M.B.A</option>
+                    <option value="l5">M.B.B.S + M.D.</option>
+                    <option value="l6">M.S in America</option>
+                    <option value="l7">Any Other</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid country.
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="state">Property Share</label>
+                <select class="custom-select d-block w-100" id="state" required>
+                    <option value="k1">Nothing except Salary</option>
+                    <option value="k2">Less than 5,00,000</option>
+                    <option selected="yes" value="k3">5,00,000 to 15,00,000</option>
+                    <option value="k4">15,00,000 to 50,00,000</option>
+                    <option value="k5">50,00,000 to 1,00,00,000</option>
+                    <option value="k6">1,00,00,000 to 5,00,00,000 </option>
+                    <option value="k7">More than 5,00,00,000</option>
+                </select>
+
+                <div class="invalid-feedback">
+                    Please provide a valid state.
+                </div>
+            </div>
+
+
+            <div class="col-md-6 mb-3">
+                <label for="country">Height</label>
+                <select class="custom-select d-block w-100" id="country" required>
+                    <option value="i1">Less than 5'</option>
+                    <option value="i2">5'0'' to 5'2''</option>
+                    <option value="i3">5'2'' to 5'4''</option>
+                    <option value="i4">5'5''</option>
+                    <option value="i5">5'6''</option>
+                    <option value="i6">5'7''</option>
+                    <option value="i7">5'8''</option>
+                    <option value="i8">5'9''</option>
+                    <option value="i9">5'10''</option>
+                    <option selected="yes" value="i10">5'11''</option>
+                    <option value="i11">6'0''</option>
+                    <option value="i12">More than 6'</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid country.
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="state">Color</label>
+                <select class="custom-select d-block w-100" id="state" required>
+                    <option value="j1">Very Fair</option>
+                    <option selected="yes" value="j2">Fair</option>
+                    <option value="j3">Brown</option>
+                    <option value="j4">Wheatish</option>
+                    <option value="j5">Dark</option>
+                </select>
+
+                <div class="invalid-feedback">
+                    Please provide a valid state.
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="country">Hair Style</label>
+                <select class="custom-select d-block w-100" id="country" required>
+                    <option
+                            value="e1">Bald Head</option><option value="e2">Semi Bald</option><option
+                        selected="yes" value="e3">Full Hair</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid country.
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="state">Body Style</label>
+                <select class="custom-select d-block w-100" id="state" required>
+                    <option value="f1">Perfect</option>
+                    <option selected="yes" value="f2">Average</option>
+                    <option value="f3">Perfect except Bellysize</option>
+                    <option value="f4">Out of Shape</option>
+                </select>
+
+                <div class="invalid-feedback">
+                    Please provide a valid state.
+                </div>
+            </div>
+        </div>
+
+
+
+        <a class="btn btn-primary btn-lg btn-block" type="submit" href="page.html">Compute Dowry</a>
+        <hr>
+        <h3 class='post-title entry-title' itemprop='name'>
+            Formula
+        </h3>
+        <div style="text-align: left;">
+            <br/>Dowry
+            = Base Amount because of Social Status + [f(Salary) * Velocity provided
+            by Career Stability] + [f(Social Status) * Acceleration / Deceleration provided by Profile
+            Availability &amp; Partner Preference
+            Availability] * [Avg time for suitable profile match] ^ 2
+        </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+<footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2020 Dowry Calculator</p>
+
+</footer>
+
+</div>
+
+
+
+
+
+
+<div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+<script src="/docs/4.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd"
+        crossorigin="anonymous"></script>
+<script src="form-validation.js"></script>
+</div>
+
+
+
+
+</body>
+</html>
